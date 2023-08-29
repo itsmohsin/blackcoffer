@@ -67,6 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               const SizedBox(height: 20),
               TextFormField(
+                keyboardType: TextInputType.phone,
                 cursorColor: Colors.purple,
                 style:
                     const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
