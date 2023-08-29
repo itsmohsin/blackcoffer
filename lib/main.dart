@@ -19,15 +19,12 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (_) => AuthProvider(),
-        ),
-        // ChangeNotifierProvider(
-        //   create: (_) => AuthStateNotifier(),
-        // )
+        )
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         home: WelcomeScreen(),
-        title: "FlutterPhoneAuth",
+        title: "Blackcoffer",
       ),
     );
   }

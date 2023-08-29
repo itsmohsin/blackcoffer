@@ -1,4 +1,5 @@
 import 'package:blackcoffer/provider/auth_provider.dart';
+import 'package:blackcoffer/screens/home_screen.dart';
 import 'package:blackcoffer/screens/user_information_screen.dart';
 import 'package:blackcoffer/utils/utils.dart';
 import 'package:blackcoffer/widgets/custom_button.dart';
@@ -143,6 +144,18 @@ class _OtpScreenState extends State<OtpScreen> {
           (value) async {
             if (value == true) {
               // user exist in our app
+              ap.getDataFromFirestore().then(
+                    (value) => ap.saveUserDataToSP().then(
+                          (value) => ap.setSignedIn().then(
+                                (value) => Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => const HomeScreen(),
+                                    ),
+                                    (route) => false),
+                              ),
+                        ),
+                  );
             } else {
               // new user
               Navigator.pushAndRemoveUntil(
