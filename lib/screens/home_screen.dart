@@ -46,10 +46,42 @@ class _HomeScreenState extends State<HomeScreen> {
             radius: 100,
           ),
           const SizedBox(height: 20),
-          Text(ap.userModel.name),
-          Text(ap.userModel.phoneNumber),
-          Text(ap.userModel.email),
-          Text(ap.userModel.bio),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Name : ", style: TextStyle(fontSize: 17)),
+              Text(ap.userModel.name, style: const TextStyle(fontSize: 17)),
+            ],
+          ),
+          const Divider(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Email : ", style: TextStyle(fontSize: 17)),
+              Text(ap.userModel.email, style: const TextStyle(fontSize: 17)),
+            ],
+          ),
+          const Divider(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Phone No : ", style: TextStyle(fontSize: 17)),
+              Text(ap.userModel.phoneNumber,
+                  style: const TextStyle(fontSize: 17)),
+            ],
+          ),
+          const Divider(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("Bio : ", style: TextStyle(fontSize: 17)),
+              Text(ap.userModel.bio, style: const TextStyle(fontSize: 17)),
+            ],
+          ),
+          // Text(ap.userModel.name),
+          // Text(ap.userModel.phoneNumber),
+          // Text(ap.userModel.email),
+          // Text(ap.userModel.bio),
         ],
       )),
     );
