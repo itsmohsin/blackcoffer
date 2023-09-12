@@ -44,7 +44,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         child: isLoading == true
             ? const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.purple,
+                  color: Colors.red,
                 ),
               )
             : SingleChildScrollView(
@@ -58,10 +58,10 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         child: image == null
                             ? const CircleAvatar(
                                 backgroundColor: Colors.purple,
-                                radius: 50,
+                                radius: 75,
                                 child: Icon(
                                   Icons.account_circle,
-                                  size: 50,
+                                  size: 75,
                                   color: Colors.white,
                                 ),
                               )
